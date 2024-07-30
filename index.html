@@ -69,9 +69,45 @@
   }
   .artist {
     background-color: #fff;
-    padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    perspective: 1000px;
+    height: 300px;
+  }
+  .artist-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .artist:hover .artist-inner {
+    transform: rotateY(180deg);
+  }
+  .artist-front, .artist-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .artist-front {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  }
+  .artist-back {
+    background-color: #4a0e0e;
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 10px;
+    font-size: 14px;
+    overflow-y: auto;
   }
   .social-links a {
     display: inline-block;
@@ -104,7 +140,7 @@
   <header>
     <div class="container">
       <h1>Bourfest 2024</h1>
-      <p>Une expérience musicale unique dans un cadre historique exceptionnel</p>
+      <p>Le bourfest vous ouvre une nouvelle fois les portes, non pas d'un chateau fort cette fois, mais d'un village fortifié ! <br> Rendez-vous à Marthon le 24 août pour une expérience festive et musicale unique dans un cadre historique exceptionnel !</p>
     </div>
   </header>
   
@@ -123,43 +159,112 @@
       <p><strong>Lieu :</strong> Esplanade du Donjon de la Tour du Breuil, 16380 Marthon, Charente, France</p>
       <p><strong>Date :</strong> Le 24 Août 2024</p>
       <h3>Comment s'y rendre</h3>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d378.0290330295653!2d0.44526171373145634!3d45.612458342996504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fe4dda971e717d%3A0x65447a181675ef28!2sDonjon%20de%20la%20tour%20du%20Breuil!5e0!3m2!1sfr!2sfr!4v1721826034708!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d378.0290330295653!2d0.44526171373145634!3d45.612458342996504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fe4dda971e717d%3A0x65447a181675ef28!2sDonjon%20de%20la%20tour%20du%20Breuil!5e0!3m2!1sfr!2sfr!4v1721826034708!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2280.0459173157856!2d0.44286939786441804!3d45.6126883891985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fe4decfa1f4317%3A0x27e698535e3050fe!2sBourfest!5e0!3m2!1sfr!2sfr!4v1722330646762!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<img src="/img/plan_du_site.jpg" alt="plan du site">
       <p>
-        <strong>En voiture :</strong> Infos à venir
+        <strong>En voiture :</strong> <a href="https://maps.app.goo.gl/P1VHieHQUk5Gs9n57">Parking</a> 
       </p>
       <p>
-        <strong>En train :</strong> Infos à venir
-      </p>
-      <p>
-        <strong>En bus :</strong> Infos à venir
+        <strong>En train :</strong> Gare d'Angoulème puis covoiturage
       </p>
     </section>
     
     <section id="programmation">
       <h2>Programmation</h2>
-	<p>Détails à venir</p>
+
       <div class="lineup">
-        <div class="artist">
-          <h3>13h - 20h</h3>
-          <p>Jeux concours</p>
-          <p>JDR immersif</p>
-        </div>
-        <div class="artist">
-          <h3>20h - 22h</h3>
-          <p>Spectacle Musical</p>
-        </div>
-        <div class="artist">
-          <h3>22h - 1h</h3>
-          <p>Concerts</p>
-        </div>
-        <div class="artist">
-          <h3>1h - 6h</h3>
-          <p>DJ set Live</p>
+        <div class="lineup">
+          <div class="artist">
+            <div class="artist-inner">
+              <div class="artist-front" style="background-image: url('img/couverture_bnr_new.webp');">
+                <h3>Black N Red</h3>
+              </div>
+              <div class="artist-back">
+                <h3>Black N Red</h3>
+                <p>Imaginez-vous transportés dans un univers où chaque note 
+                  résonne avec une énergie captivante et où la scène s'embrase 
+                  dès que notre frontwoman prend le micro. Elle incarne l'essence 
+                  même du rock, avec une présence magnétique, une voix 
+                  puissante et une attitude qui enflamme les foules. 
+                  Notre musique est un mélange explosif de riffs de guitare 
+                  accrocheurs, de lignes de basse envoûtantes et de rythmes de 
+                  batterie percutants. Chaque morceau est une expérience 
+                  sensorielle vous incitant à bouger et à chanter.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="artist">
+            <div class="artist-inner">
+              <div class="artist-front" style="background-image: url('img/anatole_swing_cover.jpg');">
+                <h3>Anatole Swing</h3>
+              </div>
+              <div class="artist-back">
+                <h3>Anatole Swing</h3>
+                <p>Plongez dans l'univers envoûtant d'Anatole Swing, 
+                  un groupe de jazz manouche qui fusionne avec brio les 
+                  sonorités authentiques du swing. Au renfort de leur 
+                  contrebasse palpitante, leur violon virtuose, leur guitare 
+                  flamboyantes et leur accordéon envoûtant, ces artistes 
+                  talentueux vous promettent une expérience musicale inoubliable.
+                  Préparez-vous à être transportés par leur énergie contagieuse
+                  et leur passion débordante pour un voyage sonore des plus 
+                  exquises. Ne manquez pas ce rendez-vous exceptionnel au cœur du Bourfest !
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="artist">
+            <div class="artist-inner">
+              <div class="artist-front" style="background-image: url('img/ceylon_cover.webp');">
+                <h3>Ceylon</h3>
+              </div>
+              <div class="artist-back">
+                <h3>Ceylon</h3>
+                <p>CEYLON [prononcez “C’est long”] compose une musique instinctive 
+                  et énergique sur laquelle les mots fusent au rythme des cordes et 
+                  autres oiseaux. Auréolés d’une vibrante synergie de groupe, iels 
+                  s’aventurent dans des paysages cosmopolites, entre Indie Rock et Chanson
+                  Lorsqu’on observe CEYLON, on pense au lyrisme de Radiohead, 
+                  au franc-parler de Bonnie Banane et à la sensualité de Flavien Berger. 
+                  Sur scène, CEYLON est le son et la musique d'un groupe de cinq personnes,
+                  portés par le message et les mots de deux voix.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <p>Et plus d'artistes encore à découvrir !</p>
       <p>Buvette et restauration sur toute la durée de l'évènement</p>
+          <!--
+          <div class="artist">
+            <div class="artist-inner">
+              <div class="artist-front" style="background-image: url('bourfest-website/img/couverture_bnr_new.webp');">
+                <h3>Les Troubadours Électriques</h3>
+                <p>Vendredi 15 juillet - 18h00</p>
+              </div>
+              <div class="artist-back">
+                <h3>Les Troubadours Électriques</h3>
+                <p>Mêlant habilement les sonorités médiévales aux rythmes électroniques modernes, Les Troubadours Électriques offrent une expérience musicale unique. Leur performance énergique vous transportera dans un voyage temporel fascinant.</p>
+              </div>
+            </div>
+          </div>
+          <div class="artist">
+            <div class="artist-inner">
+              <div class="artist-front" style="background-image: url('https://websim.example.com/medieval-music-fest/images/medieval-punk.jpg');">
+                <h3>Médiéval Punk</h3>
+                <p>Vendredi 15 juillet - 20h30</p>
+              </div>
+              <div class="artist-back">
+                <h3>Médiéval Punk</h3>
+                <p>Médiéval Punk fusionne l'énergie brute du punk avec les mélodies envoûtantes de la musique médiévale. Leur son unique et leur présence scénique explosive promettent un spectacle inoubliable.</p>
+              </div>
+            </div>
+          </div>
+          -->
     </section>
-    
     <section id="reseaux">
       <h2>Suivez-nous sur les réseaux sociaux</h2>
       <div class="social-links">
@@ -189,13 +294,15 @@
       <p>Utilisez le hashtag #bourfest2024 pour partager vos moments préférés !</p>
     </section>
     
-    <section id="sponsors">
-      <h2>Nos Sponsors Locaux</h2>
-      <p><strong>Mairie de Marthon</strong></p>
-      <p><strong>Communauté de communes de Marthon</strong></p>
+    <section id="partenaires">
+      <h2>Nos partenaires Locaux</h2>
+      <p><strong>La <a href="https://www.brasserie-larainette.fr"> brasserie la reinette </a></strong> - "La Rainette est produite depuis 2006, sur les rives du Bandiat,
+        dans un moulin du 15ème siècle, à Chazelles (Charente)". </p>
       <p><strong>Volt'R</strong> - "Fournisseur technique officiel du Bourfest depuis 2022 !"</p>
-      <p><strong>Les pains de Sophie</strong> - "Découvrez nos recettes traditionnelles !"</p>
-      <p>... Et bien d'autres à venir ! Vous souhaitez nous sponsoriser ? Contactez-nous : president@bourfest.org</p>
+      <p><strong>Les pains de Sophie</strong> - "Fabrication artisanale : Découvrez nos recettes traditionnelles !"</p>
+      <p><strong>Municipalité de Marthon</strong></p>
+      <p><strong>Communauté de communes de Marthon</strong></p>
+      <p>... Et bien d'autres à venir ! Vous souhaitez nous soutenir ? Contactez-nous : orga@bourfest.org</p>
     </section>
   </div>
   
