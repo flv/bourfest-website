@@ -79,7 +79,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border-bottom: 2px solid #4a0e0e;
     padding-bottom: 10px;
   }
-  .lineup {
+  .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -132,12 +132,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: 24px;
     color: #4a0e0e;
   }
-  .center-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh; /* This will center the image vertically within the viewport height */
-  }
   img {
       max-width: 100%;
       height: auto; /* Ensures the image scales properly */
@@ -170,7 +164,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   <header>
     <div class="container">
-      <h1>Bourfest 2024</h1>
+      <img src="img/bourfest_logo_variante.png" alt="Bourfest">
+      <h1>2024</h1>
       <p>Le Bourfest vous ouvre de nouveau les portes, non pas d'un chateau fort cette fois, mais d'un village fortifié ! <br> Rendez-vous à Marthon le 24 août pour une expérience festive et musicale unique dans un cadre historique exceptionnel !</p>
     </div>
   </header>
@@ -192,10 +187,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p><strong>Lieu :</strong> Esplanade du Donjon de la Tour du Breuil, 16380 Marthon, Charente, France</p>
       <p><strong>Date :</strong> Le 24 Août 2024</p>
       <h3>Comment s'y rendre</h3>
-      <div class=".center-section">
-<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d378.0290330295653!2d0.44526171373145634!3d45.612458342996504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fe4dda971e717d%3A0x65447a181675ef28!2sDonjon%20de%20la%20tour%20du%20Breuil!5e0!3m2!1sfr!2sfr!4v1721826034708!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2280.0459173157856!2d0.44286939786441804!3d45.6126883891985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fe4decfa1f4317%3A0x27e698535e3050fe!2sBourfest!5e0!3m2!1sfr!2sfr!4v1722330646762!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-<img src="/img/plan_du_site.jpg" alt="plan du site" style="width:50%;">
+      <div class="grid">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2280.0459173157856!2d0.44286939786441804!3d45.6126883891985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fe4decfa1f4317%3A0x27e698535e3050fe!2sBourfest!5e0!3m2!1sfr!2sfr!4v1722330646762!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <img src="/img/plan_du_site.jpg" alt="plan du site">
       </div>
         <p>
         <strong>En voiture :</strong> <a href="https://maps.app.goo.gl/P1VHieHQUk5Gs9n57">Parking</a> 
@@ -211,8 +205,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="programmation">
       <h2>Programmation</h2>
 
-      <div class="lineup">
-        <div class="lineup">
+      <div class="grid">
+        <div class="grid">
           <div class="artist">
             <div class="artist-inner">
               <div class="artist-front" style="background-image: url('img/couverture_bnr_new.webp');">
@@ -256,8 +250,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </p>
-      <div class="lineup">
-        <div class="lineup">
+      <div class="grid">
+        <div class="grid">
           <div class="artist">
             <div class="artist-inner">
               <div class="artist-front" style="background-image: url('img/ceylon_cover.webp');">
@@ -410,7 +404,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
   <section id="affiche">
     <h2>Affiche</h2>
-    <div class=".center-section">
+    <div class="grid">
       <img src="img/Bourfest2024.webp" alt="Affiche">
     </div>
   </section>
